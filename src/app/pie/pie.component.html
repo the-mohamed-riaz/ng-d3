@@ -1,3 +1,9 @@
 <div class="chart_container">
   <svg id="pie"></svg>
+  <div class="legends-container">
+    <div class="legend" *ngFor="let item of dataset; index as i">
+      <div class="swatch" [style]="'background:' + palette[i]"></div>
+      <div class="text">{{ item.name }}</div>
+    </div>
+  </div>
 </div>
