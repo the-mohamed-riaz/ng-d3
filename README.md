@@ -6,7 +6,10 @@
  - D3
 
 Find the full tutorial here at [medium article](https://medium.com/@the.mohamed.riaz/creating-custom-pie-charts-with-d3-using-angular-13-561ea1585e33)
+
+or copy paste the following link
 https://medium.com/@the.mohamed.riaz/creating-custom-pie-charts-with-d3-using-angular-13-561ea1585e33
+
 
 # D3Charts
 
