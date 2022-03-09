@@ -1,3 +1,13 @@
+# This project was built for creating custom charts with angular and d3js
+
+## pre-requirements
+ - Angular 13
+ - Git
+ - D3
+
+Find the full tutorial here at [medium article](https://medium.com/@the.mohamed.riaz/creating-custom-pie-charts-with-d3-using-angular-13-561ea1585e33)
+https://medium.com/@the.mohamed.riaz/creating-custom-pie-charts-with-d3-using-angular-13-561ea1585e33
+
 # D3Charts
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
