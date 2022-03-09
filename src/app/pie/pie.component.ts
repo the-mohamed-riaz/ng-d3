@@ -25,10 +25,10 @@ export class PieComponent implements AfterViewInit {
   palette: string[] = ['#3886A4', '#6EBE9F', '#C73858', '#F3A935'];
 
   dataset: Array<dataset_i> = [
-    { name: 'A', value: 24 },
-    { name: 'B', value: 12 },
-    { name: 'C', value: 74 },
-    { name: 'C', value: 44 },
+    { name: 'August', value: 24 },
+    { name: 'September', value: 12 },
+    { name: 'October', value: 74 },
+    { name: 'November', value: 44 },
   ];
 
   ngOnInit(): void {
@@ -41,7 +41,7 @@ export class PieComponent implements AfterViewInit {
       document.getElementsByClassName('chart_container')[0].clientWidth -
       this.p;
     // dynamically generating radius from parent nodes
-    this.r = Math.min(this.w, this.h) / 2;
+    this.r = Math.min(this.w, this.h) / 2 - this.p / 2;
   }
 
   ngAfterViewInit(): void {
@@ -83,7 +83,7 @@ export class PieComponent implements AfterViewInit {
         var posB = outerArc.centroid(d);
         var posC = outerArc.centroid(d);
         var midangle = d.startAngle + (d.endAngle - d.startAngle) / 2; // we need the angle to see if the X position will be at the extreme right or extreme left
-        posC[0] = this.r * 0.87 * (midangle < Math.PI ? 1 : -1); // multiply by 1 or -1 to put it on the right or on the left
+        posC[0] = this.r * 0.9 * (midangle < Math.PI ? 1 : -1); // multiply by 1 or -1 to put it on the right or on the left
         return [posA, posB, posC];
       });
     svg
