@@ -115,5 +115,55 @@ export class PieComponent implements AfterViewInit {
       .attr('class', 'portion')
       .attr('id', (d, i) => `portion${i}`)
       .style('stroke-width', '4px');
+
+    arcs.on('mouseover', (event: any) => {
+      d3.select('#' + event.target.id)
+        .transition()
+        .ease(d3.easeExp)
+        .duration(400)
+        .attr(
+          'd',
+          d3
+            .arc<any>()
+            .innerRadius(this.r * 0.5)
+            .outerRadius(this.r * 0.8)
+        );
+      let id = event.target.id[(event.target.id as string).length - 1];
+
+      d3.select('#label' + id)
+        .style('width', '2rem')
+        .style('height', '2rem')
+        .transition()
+        .ease(d3.easeExp)
+        .duration(400);
+
+      d3.select('#labelText' + id)
+        .style('font-size', '1.6rem')
+        .transition()
+        .ease(d3.easeExp)
+        .duration(400)
+        .style('text-decoration', 'underline');
+    });
+    arcs.on('mouseout', (event: any) => {
+      d3.select('#' + event.target.id)
+        .transition()
+        .ease(d3.easeExp)
+        .duration(600)
+        .attr('d', arc as any);
+      let id = event.target.id[(event.target.id as string).length - 1];
+
+      d3.select('#label' + id)
+        .style('width', '1rem')
+        .style('height', '1rem')
+        .transition()
+        .ease(d3.easeExp)
+        .duration(600);
+      d3.select('#labelText' + id)
+        .transition()
+        .ease(d3.easeExp)
+        .duration(600)
+        .style('font-size', '1rem')
+        .style('text-decoration', 'none');
+    });
   }
 }

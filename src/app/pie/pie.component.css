@@ -4,10 +4,17 @@
   border-radius: 8px;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+}
+#pie {
+  position: relative;
+  top: -5%;
 }
 .legends-container {
+  position: relative;
+  bottom: 8%;
   width: 100%;
-  height: 100%;
+  height: auto;
   min-height: 2rem;
   display: flex;
   flex-direction: row;
@@ -35,7 +42,8 @@
   border: 1px solid #e6e6e6;
 }
 .legend > .text {
-  font-size: 14px;
+  font-size: 1rem;
   color: rgb(85, 85, 85);
   margin-right: 0.5rem;
+  /* text-decoration: underline; */
 }
