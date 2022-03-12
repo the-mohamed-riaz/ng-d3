@@ -40,6 +40,7 @@
   height: 16px;
   border-radius: 50%;
   border: 1px solid #e6e6e6;
+  padding-right: 10px;
 }
 .legend > .text {
   font-size: 1rem;

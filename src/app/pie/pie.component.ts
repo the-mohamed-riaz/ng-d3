@@ -131,14 +131,14 @@ export class PieComponent implements AfterViewInit {
       let id = event.target.id[(event.target.id as string).length - 1];
 
       d3.select('#label' + id)
-        .style('width', '2rem')
-        .style('height', '2rem')
+        .style('width', '1.2rem')
+        .style('height', '1.2rem')
         .transition()
         .ease(d3.easeExp)
         .duration(400);
 
       d3.select('#labelText' + id)
-        .style('font-size', '1.6rem')
+        // .style('font-size', '1.6rem')
         .transition()
         .ease(d3.easeExp)
         .duration(400)
@@ -162,7 +162,7 @@ export class PieComponent implements AfterViewInit {
         .transition()
         .ease(d3.easeExp)
         .duration(600)
-        .style('font-size', '1rem')
+        // .style('font-size', '1rem')
         .style('text-decoration', 'none');
     });
   }
